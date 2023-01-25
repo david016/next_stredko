@@ -2,10 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import { MouseEventHandler } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  let scrollSmootly = (
+    event: any
+  ): MouseEventHandler<HTMLAnchorElement> | undefined => {
+    console.log(event);
+    console.log("smooth");
+    return undefined;
+  };
   return (
     <>
       <Head>
@@ -14,14 +23,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
+      <div className={styles.container} style={{ scrollBehavior: "smooth" }}>
         <div className="home" id="home">
           <header>
             <nav>
               <h1>StreDko</h1>
               <ul>
                 <li>
-                  <a href="#home">Domov</a>
+                  <Link href="#home" scroll={false}>
+                    Domov
+                  </Link>
+                  {/* <a
+                    href="#home"
+                    onClick={scrollSmootly}
+                    style={{ scrollBehavior: "smooth" }}
+                  >
+                    Domov
+                  </a> */}
                 </li>
                 <li>
                   <a href="#about">Kto sme?</a>
