@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
           <div id="events">
-            <h1>Udalosti</h1>
+            <h2>Udalosti</h2>
           </div>
         </main>
       </div>
