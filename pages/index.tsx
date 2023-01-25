@@ -23,16 +23,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container} style={{ scrollBehavior: "smooth" }}>
+      <div className={styles.container}>
         <div className="home" id="home">
           <header>
             <nav>
               <h1>StreDko</h1>
               <ul>
                 <li>
-                  <Link href="#home" scroll={false}>
-                    Domov
-                  </Link>
+                  <Link href="#home">Domov</Link>
                   {/* <a
                     href="#home"
                     onClick={scrollSmootly}
@@ -42,10 +40,12 @@ export default function Home() {
                   </a> */}
                 </li>
                 <li>
-                  <a href="#about">Kto sme?</a>
+                  {/* <a href="#about">Kto sme?</a> */}
+                  <Link href="#about">Kto sme?</Link>
                 </li>
                 <li>
-                  <a href="">Udalosti </a>
+                  {/* <a href="">Udalosti </a> */}
+                  <Link href="#events">Udalosti</Link>
                 </li>
                 <li>
                   <a href="">Kontakt</a>
@@ -82,7 +82,7 @@ export default function Home() {
               ></Image>
             </div>
           </div>
-          <div className="udalosti">
+          <div id="events">
             <h1>Udalosti</h1>
           </div>
         </main>
