@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { MouseEventHandler } from "react";
 import Link from "next/link";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,36 +24,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
+      <div className={styles.container_main}>
         <div className="home" id="home">
-          <header>
+          {/* <Header></Header> */}
+          {/* <header>
             <nav>
               <h1>StreDko</h1>
               <ul>
                 <li>
                   <Link href="#home">Domov</Link>
-                  {/* <a
-                    href="#home"
-                    onClick={scrollSmootly}
-                    style={{ scrollBehavior: "smooth" }}
-                  >
-                    Domov
-                  </a> */}
                 </li>
                 <li>
-                  {/* <a href="#about">Kto sme?</a> */}
                   <Link href="#about">Kto sme?</Link>
                 </li>
                 <li>
-                  {/* <a href="">Udalosti </a> */}
                   <Link href="#events">Udalosti</Link>
                 </li>
                 <li>
-                  <a href="">Kontakt</a>
+                  <Link href="#contacts">Kontakt</Link>
+                </li>
+                <li>
+                  <Link href="/login">Login</Link>
                 </li>
               </ul>
             </nav>
-          </header>
+          </header> */}
         </div>
         <main>
           <div className="about" id="about">

@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.container {
+.container_main {
   max-width: 100vw;
   font-family: var(--secondary-font-family);
   font-size: 14px;
